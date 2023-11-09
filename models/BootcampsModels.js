@@ -11,7 +11,8 @@ const BootcampSchema = mongoose.Schema({
     },
     phone:{
         type: Number,
-        maxlength: [10, "Longitud de nombre menor a 10"]
+        maxlength: [10, "Longitud de nombre menor a 10"],
+        required: [ true, "Teléfono requerido"],
     },
     address:{
         type: String,
@@ -24,7 +25,8 @@ const BootcampSchema = mongoose.Schema({
             "Frontend/UX" ,
             "Backend",
             "DevOps"
-        ]
+        ],
+        required: [ true, " Tema requerido"],
     },
     averageRating: Number,
     createAt: Date
