@@ -7,6 +7,7 @@ const colors = require('colors')
 const bootcampRoutes = require('./routes/bootcampRoutes')
 const coursesRoutes = require('./routes/coursesRoutes')
 const reviewsRoutes = require('./routes/reviewsRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 
 //DEPENDENCIA PARA CONEXION
@@ -29,8 +30,10 @@ app.use(express.json())
 app.use('/api/v1/devcamp-2687351/bootcamps', bootcampRoutes)
 //Vincular las rutas de courses
 app.use('/api/v1/devcamp-2687351/cursos', coursesRoutes)
-//Vincular las rutas de courses
+//Vincular las rutas de reviews
 app.use('/api/v1/devcamp-2687351/reviews', reviewsRoutes)
+//Vincular las rutas de user
+app.use('/api/v1/devcamp-2687351/auth', userRoutes)
 
 
 //primera prueba de URL del servidor
